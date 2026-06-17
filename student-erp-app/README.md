@@ -58,8 +58,14 @@ npm install
 
 # 3. Build APK
 cd android
-./gradlew assembleDebug
+gradlew.bat assembleDebug
 # APK location: android/app/build/outputs/apk/debug/app-debug.apk
+```
+
+You can also run the APK build from the project root on Windows:
+
+```powershell
+npm run apk:debug
 ```
 
 ### Features

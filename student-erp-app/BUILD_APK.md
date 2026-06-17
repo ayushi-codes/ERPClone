@@ -10,6 +10,11 @@ This guide explains how to build and deploy the Student ERP app as an Android AP
   - Or Android Command-line Tools (minimal setup)
 - **Java JDK 11+** — Usually installed with Android Studio
 
+### Android SDK Setup
+- Android Studio installs the SDK automatically.
+- If you use command-line tools only, install the SDK and set `ANDROID_HOME` or `ANDROID_SDK_ROOT`.
+- For Capacitor builds, Android Studio must be able to find the SDK or you must create `android/local.properties` with the SDK path.
+
 ### Environment Setup
 
 1. **Install Android SDK** (if using command-line tools):
@@ -62,8 +67,8 @@ npx cap copy android
 ```powershell
 cd android
 
-# Build debug APK
-./gradlew assembleDebug
+# Build debug APK on Windows
+gradlew.bat assembleDebug
 
 # APK output: android/app/build/outputs/apk/debug/app-debug.apk
 ```
@@ -73,8 +78,8 @@ cd android
 ```powershell
 cd android
 
-# Build release APK
-./gradlew assembleRelease
+# Build release APK on Windows
+gradlew.bat assembleRelease
 
 # APK output: android/app/build/outputs/apk/release/app-release.apk
 ```
@@ -117,7 +122,7 @@ buildTypes {
 
 ### 3. Build Signed Release APK
 ```powershell
-./gradlew assembleRelease
+gradlew.bat assembleRelease
 # Output: android/app/build/outputs/apk/release/app-release.apk
 ```
 
@@ -183,13 +188,13 @@ npm run server
 ```powershell
 # Start Android emulator (from Android Studio)
 # Then:
-./gradlew installDebug
+gradlew.bat installDebug
 ```
 
 ### Test on Physical Device
 ```powershell
 # Connect via USB with USB debugging enabled
-./gradlew installDebug
+gradlew.bat installDebug
 ```
 
 ## Troubleshooting
@@ -210,8 +215,8 @@ Solution: Make sure you're in the android/ directory
 ### Build Fails
 ```powershell
 # Clean and rebuild
-./gradlew clean
-./gradlew assembleDebug
+gradlew.bat clean
+gradlew.bat assembleDebug
 ```
 
 ### ANDROID_HOME Not Set

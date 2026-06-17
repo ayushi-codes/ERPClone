@@ -7,9 +7,9 @@
     "server": "node server/index.js",
     "dev": "node server/index.js",
     "build": "npx cap copy android && npx cap sync android",
-    "apk:debug": "npm run build && cd android && ./gradlew assembleDebug",
-    "apk:release": "npm run build && cd android && ./gradlew assembleRelease",
-    "apk:install": "cd android && ./gradlew installDebug",
+    "apk:debug": "npm run build && cd android && gradlew.bat assembleDebug",
+    "apk:release": "npm run build && cd android && gradlew.bat assembleRelease",
+    "apk:install": "cd android && gradlew.bat installDebug",
     "apk:run": "npm run apk:install && npm run apk:start",
     "apk:start": "adb shell am start -n com.studenterp.app/com.getcapacitor.MainActivity"
   },

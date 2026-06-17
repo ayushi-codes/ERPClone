@@ -1,0 +1,11 @@
+{
+  "name": "student-erp-app",
+  "version": "1.0.0",
+  "description": "Student ERP mobile UI prototype (Dashboard + Attendance) built with HTML/CSS/JS",
+  "scripts": {
+    "start": "npx live-server src --port=5500 --open=/index.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
